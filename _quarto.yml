@@ -1,0 +1,37 @@
+project:
+  type: website
+  output-dir: docs
+
+execute:
+  freeze: auto
+
+website:
+  title: UKRN Open Research Project
+  site-url: https://UKRN.github.io/ORP
+  repo-url: https://github.com/UKRN/ORP
+  image: images/logo.png
+  favicon: images/favicon.ico
+  navbar:
+    logo: /images/logo.png
+    logo-alt: "Globe with UKRN and big pink UK"
+    pinned: true
+    toggle-position: right
+  page-footer:
+    background: primary
+    left: "![](images/cc-by.svg) ©2024 University of Bristol "
+    right:
+      - text: credit
+        href: credit.html
+      - text: "{{< ai osf size=1x >}}"
+        aria-label: OSF
+        href: https://osf.io/x8j9q/
+      - icon: github
+        aria-label: GitHub
+        href: https://github.com/UKRN/OR-demo
+      - icon: twitter
+        aria-label: Twitter
+        href: https://twitter.com/ukrepro
+format:
+  html:
+    theme: [simplex, www/style.scss]
+    mainfont: Roboto

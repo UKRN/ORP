@@ -1,0 +1,193 @@
+/*-- scss:defaults --*/
+
+// import fonts
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+$headerfont: "Helvetica", sans-serif;
+
+// colours
+$pink: #D6318A;
+$green: #52A59D;
+$lightpurple: #4F5183;
+$darkpurple: #282A58;
+$text: #333333;
+$bg: #EEEEEE;
+
+// Base document colors
+$navbar-bg: $darkpurple; // navbar
+$navbar-fg: $bg; // navbar foreground elements
+$navbar-hl: $green; // highlight color when hovering over navbar links
+$body-bg: $bg; // page background
+$body-color: $text; // page text
+$footer-bg: $lightpurple; // footer
+$link-color: mix(black, $green, 25%); // hyperlinks
+
+/*-- scss:rules --*/
+
+.navbar-logo {
+  max-height: 3em;
+}
+
+.nav-footer-left img {
+  max-height: 2em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headerfont;
+  color: $darkpurple;
+  border-bottom: none;
+}
+
+div.callout.callout-none {
+  border-color: $lightpurple;
+}
+
+div.callout.callout-none div.callout-header {
+  margin: -0.4em -0.7em 0 -0.7em;
+  padding: 0.1em 0.8em;
+  background-color: transparentize($lightpurple, .7);
+}
+
+div.callout.feature {
+  border-color: $pink;
+}
+
+div.callout.feature div.callout-header {
+  background-color: transparentize($pink, .7);
+}
+
+div.callout.callout-titled.feature .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="stroke: %23D6318A; fill: %23D6318A; stroke-width: 1px;" class="bi" viewBox="0 0 16 16"><polygon points="8.33,0 3.33,15 15.83,5.5 0,5.5 13.33,15" /></svg>')
+}
+
+
+.projlist img {
+  width: 100px;
+  float: left;
+  padding-right: 1em;
+}
+
+.projlist li {
+  clear: both;
+  list-style: none;
+}
+
+.projheader img {
+  max-height: 200px;
+}
+
+/* rainbow borders */
+body {
+  margin-top: 15px;
+  box-shadow: 0 -3px 0 0 $pink,
+              0 -6px 0 0 white,
+              0 -9px 0 0 $lightpurple,
+              0 -12px 0 0 $green,
+              0 -15px 0 0 $darkpurple;
+}
+
+/* external link icons */
+a[target="_blank"]::after, a[download]::after {
+  margin: 0 3px 0 5px;
+  font-weight: 400;
+  font-family: "bootstrap-icons";
+  font-size: 70%;
+  text-decoration: none !important;
+}
+
+a[download]::after {
+  content: "\f30a";
+}
+
+a[target="_blank"]::after {
+  content:"\f1c5";
+}
+
+#TOC li,
+.sidebar-item-text > span {
+  display: list-item;
+  list-style-type: circle;
+  padding-bottom: 0.75em;
+}
+
+.image-links a {
+  max-width: 100px;
+  float: left;
+  padding: 0.5em;
+}
+
+.overview figcaption {
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+}
+
+.navbar-brand-logo {
+  background-color: transparent;
+  overflow: visible;
+}
+
+.navbar-title {
+  color: $bg;
+  height: 2em;
+  display: inline-block;
+  text-wrap: wrap;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar-logo {
+    display: none;
+  }
+}
+
+.navbar-nav-scroll {
+  text-align: right;
+}
+
+
+.framework-table thead th {
+  background-color: $darkpurple;
+  color: $bg;
+}
+
+.framework-table tbody tr {
+  border-bottom: 1px solid $darkpurple;
+}
+
+.framework-table tbody td:first-child {
+  min-width: 8em;
+}
+
+.framework-item tbody td,
+.framework-table tbody td+td {
+  line-height: 1.2em;
+  font-size: smaller;
+  min-width: 12em;
+}
+
+/*
+.framework-table tbody td span {
+  display: inline-block;
+  max-height: 15em;
+  overflow: scroll;
+}
+*/
+
+.framework-item tbody tr td:nth-child(1),
+.framework-table tbody tr td:nth-child(2) {
+  background-color: #F8CCCC;
+}
+.framework-item tbody tr td:nth-child(2),
+.framework-table tbody tr td:nth-child(3) {
+  background-color: #FBE4D5;
+}
+.framework-item tbody tr td:nth-child(3),
+.framework-table tbody tr td:nth-child(4) {
+  background-color: #FEF2CC;
+}
+.framework-item tbody tr td:nth-child(4),
+.framework-table tbody tr td:nth-child(5) {
+  background-color: #E2EFD9;
+}
+
